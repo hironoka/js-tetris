@@ -77,7 +77,8 @@ function downObject() {
     freeze();        // →④着地したらオブジェクトを盤面へ固定
     clearLines();    // →⑤1行揃ったら消す
     if (lose) {
-      alert(score + "points! Do you want to retry?");
+      var alertExist = 0;
+      swal(score + ' points', 'Do you want to repray?')
       newGame();     // →⓪Gameover newGameへ
       return false;
     }
@@ -179,7 +180,7 @@ function keyPress(key) {
 function rotate(current) {
   var newCurrent = [];
   for (var y = 0; y < 4; ++y) {
-    newCurrent[ y ] = [];
+    newCurrent[y] = [];
     for (var x = 0; x < 4; ++x) {
       newCurrent[y][x] = current[3 - x][y];
     }
@@ -187,4 +188,4 @@ function rotate(current) {
   return newCurrent;
 }
 
-newGame();
+newGame(); //将来的にここを削除しましょう！！！
