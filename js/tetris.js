@@ -78,8 +78,7 @@ function downObject() {
     clearLines();    // →⑤1行揃ったら消す
     if (lose) {
       var alertExist = 0;
-      swal(score + ' points', 'Do you want to repray?')
-      newGame();     // →⓪Gameover newGameへ
+      alertGameover();
       return false;
     }
     newObject();     // →②新しいオブジェクトを生成
@@ -187,5 +186,26 @@ function rotate(current) {
   }
   return newCurrent;
 }
+
+  function alertGameover() {
+    swal({
+      title: 'Your score is ' + score + ' points!',
+      text: "Do you want to repray?",
+      type: "info",
+      showCancelButton: true,
+      closeOnConfirm: false,
+      showLoaderOnConfirm: true,
+    },
+    function(){
+      setTimeout(function(){
+        alertStart();
+      }, 2000);
+    });
+
+  }
+
+  function alertStart() {
+    swal("Start new game");
+  }
 
 newGame(); //将来的にここを削除しましょう！！！
