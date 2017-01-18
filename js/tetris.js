@@ -26,7 +26,7 @@ var objects = [
     1, 1, 1 ]
 ];
 //オブジェクトの色
-var colors = ['#FFC0CB', '#FFA07A', '#AFEEEE', '#FFD700', '#FF4F50', '#7CFC00', '#DDA0DD'];
+var colors = ['#FFC0CB', '#D0FF43', '#AFEEEE', '#FFFF66', '#86F9C5', '#A4C6FF', '#DCC2FF'];
 
 //⓪新しいゲームをはじめる
 function newGame() {

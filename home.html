@@ -1,71 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <title>Tetris</title>
-    <link rel = 'stylesheet' href = 'home.css'>
-    <link rel = 'stylesheet' href = 'lib/sweetalert.css'>
-    <script src= 'lib/sweetalert-dev.js'></script>
-
+  <link rel = 'stylesheet' href = 'home.css'>
   <script>
-    var name;
-    function r(){
-      name = prompt('お名前を入力してください');
-      if(name == "" || name=="null") {
-        name = alert('お名前を入力してください');
-        setTimeout(r, 2000);
-      } else {
-        document.getElementById('center').innerHTML = ('こんにちは' + name + 'さん。' + '\n ' + 'テトリスへようこそ!');
-      }
+  var name;
+
+  function r(){
+    name = prompt('お名前を入力してください');
+  if(name == "" || name=="null") {
+    name = alert('お名前を入力してください');
+    setTimeout(r, 2000);
+  } else{
+    // document.write("<center>");
+    // document.write('こんにちは' + name + 'さん。' + '\n ' + 'テトリスへようこそ!');
+    // document.write("</center>");
+    //　http://www.ongame-tetris.net/tetris_toha.html
+    //　http://www.pori2.net/js/dialog/2.html
+    document.getElementById('center').innerHTML = ('こんにちは' + name + 'さん。' + '\n ' + 'テトリス村へようこそ!');
   }
-  //↓アラートのデザイン変更なので気にしないでください( ´ ▽ ` )ﾉ
-  // swal({
-  // title: "An input!",
-  // text: "Write something interesting:",
-  // type: "input",
-  // showCancelButton: true,
-  // closeOnConfirm: false,
-  // animation: "slide-from-top",
-  // inputPlaceholder: "Write something"
-  // },
-  // function r(inputValue){
-  //   if (inputValue === false) return false;
-  //
-  //   if (inputValue === "") {
-  //     swal.showInputError("You need to write something!");
-  //     return false
-  //   }
-  //
-  //   swal("Nice!", "You wrote: " + inputValue, "success");
-  // });
-  //↑アラートのデザイン変更なので気にしないでください( ´ ▽ ` )ﾉ
+}
 
   </script>
 
   </head>
   <body  onload=r();>
     <div id="center"></div>
-      <h1>Tetris</h1>
-      <dl>
-        <dt>Tetrisとは？</dt>
-        <dd>テトリスはブロックを消すという非常に単純なゲームです。</dd>
-        <dd>テトリスの基本的なルールは、ブロックを横一列に隙間無く並べ、ブロックを消することで、ポイントが得られます。テトリスはブロックが最上部まで積み上がってゲームオーバーになるまでのポイントを競うゲームとなっています。</dd>
-      </dl>
+      <marquee bgcolor="#FFCCCC" direction="right" scrollamount="8"><h1>🐰おいでよテトリス村へ🐰</h1></marquee>
+<div class="main1">
+<dt>テトリスとは？</dt>
+<dd>テトリスは、ブロックを消すという非常に単純なゲームです。</dd>
+<dd>テトリスの基本的なルールは、ブロックを横一列に隙間無く並べ、ブロックを消してポイントを得ます。テトリスは、ブロックが最上部まで積み上がってゲームオーバーになるまでのポイントを競うゲームとなっています。</dd>
+</div>
 
-      <p1>操作説明</p1>
-      <ul>
-        <li>⬆️上矢印ボタンでブロックを回転させることができます</li>
-        <li>⬇️下矢印ボタンでブロックを早く落とすさことができます</li>
-        <li>➡️右矢印ボタンでブロックを右に動かすことができます</li>
-        <li>⬅️左矢印ボタンでブロックを左に動かすことができます</li>
-        <li>横一列消える事に、10ポイントもらえます</li>
-      </ul>
-      <input type= "button" value = "START" onclick = "alertStart();">
-      <input type= "button" value = "START" onclick = "location.href='index.html'",  "alertStart()">
+<div class="main2">
+<p1>操作説明</p1>
+<li>⬆️上矢印ボタンでブロックを回転させることができます</li>
+<li>⬇️下矢印ボタンでブロックを早く落とすさことができます</li>
+<li>➡️右矢印ボタンでブロックを右に動かすことができます</li>
+<li>⬅️左矢印ボタンでブロックを左に動かすことができます</li>
+<li>横一列消える事に、10ポイントもらえます</li>
+</div>
 
+<div class="main3">
+  それでは、始めましょう！下のSTARTボタンを押してください。
+</div>
+
+ <input type="button" value="START" onclick="location.href='index.html'">
 
   </body>
 </html>
-
-//http://www.ongame-tetris.net/tetris_toha.html
-//http://www.pori2.net/js/dialog/2.html
