@@ -34,7 +34,7 @@ function newGame() {
   resetGame();              // →①画面のリセット
   newObject();              // →②新しいオブジェクトを生成
   lose = false;
-  interval = setInterval(downObject, 250);
+  interval = setInterval(downObject, 500);
 }
 
 //①画面のリセット
@@ -190,7 +190,7 @@ function rotate(current) {
   function alertGameover() {
     swal({
       title: 'Your score is ' + score + ' points!',
-      text: "Do you want to repray?",
+      text: "Do you want to replay?",
       type: "info",
       showCancelButton: true,
       closeOnConfirm: false,
