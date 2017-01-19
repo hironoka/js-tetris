@@ -26,7 +26,7 @@ var objects = [
     1, 1, 1 ]
 ];
 //オブジェクトの色
-var colors = ['#FFC0CB', '#FFA07A', '#AFEEEE', '#FFD700', '#FF4F50', '#7CFC00', '#DDA0DD'];
+var colors = ['#FFC0CB', '#D0FF43', '#AFEEEE', '#FFFF66', '#86F9C5', '#A4C6FF', '#DCC2FF'];
 
 //⓪新しいゲームをはじめる
 function newGame() {
@@ -34,7 +34,7 @@ function newGame() {
   resetGame();              // →①画面のリセット
   newObject();              // →②新しいオブジェクトを生成
   lose = false;
-  interval = setInterval(downObject, 250);
+  interval = setInterval(downObject, 500);
 }
 
 //①画面のリセット
@@ -77,8 +77,8 @@ function downObject() {
     freeze();        // →④着地したらオブジェクトを盤面へ固定
     clearLines();    // →⑤1行揃ったら消す
     if (lose) {
-      alert(score + "points! Do you want to retry?");
-      newGame();     // →⓪Gameover newGameへ
+      var alertExist = 0;
+      alertGameover();
       return false;
     }
     newObject();     // →②新しいオブジェクトを生成
@@ -179,7 +179,7 @@ function keyPress(key) {
 function rotate(current) {
   var newCurrent = [];
   for (var y = 0; y < 4; ++y) {
-    newCurrent[ y ] = [];
+    newCurrent[y] = [];
     for (var x = 0; x < 4; ++x) {
       newCurrent[y][x] = current[3 - x][y];
     }
@@ -187,4 +187,25 @@ function rotate(current) {
   return newCurrent;
 }
 
-newGame();
+  function alertGameover() {
+    swal({
+      title: 'Your score is ' + score + ' points!',
+      text: "Do you want to replay?",
+      type: "info",
+      showCancelButton: true,
+      closeOnConfirm: false,
+      showLoaderOnConfirm: true,
+    },
+    function(){
+      setTimeout(function(){
+        alertStart();
+      }, 2000);
+    });
+
+  }
+
+  function alertStart() {
+    swal("Start new game");
+  }
+
+newGame(); //将来的にここを削除しましょう！！！

@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML5 Tetris</title>
-    <link rel = 'stylesheet' href = 'style.css' />
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <link rel = 'stylesheet' href = 'style.css'>
+    <link rel = 'stylesheet' href = 'lib/sweetalert.css'>
+    <script src= 'lib/sweetalert-dev.js'></script>
   </head>
+
   <body>
     <div class = "wraper">
-      <h1>Tetris</h1>
+      <h1 class="h1">Tetris</h1>
+
       <canvas width = '300' height = '600'></canvas>
-      <p id ="score">0 point</p>
+
+      <h2 id ="score" class="h2">0 point</h2>
+
+      <input type="button" class="button" value="◀︎ HOME" onclick="location.href='last02.html'">
+
       <script src = 'js/tetris.js'></script>
       <script src = 'js/controller.js'></script>
       <script src = 'js/render.js'></script>

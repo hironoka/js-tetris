@@ -1,25 +1,103 @@
-/*ゲーム画面 デザイン設定*/
+/*共通・リセットCSS*/
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-image: url("lgi01a201408041500.jpg");
 }
 
-h1, p {
-  margin: 0;
-  color: #B0C4DE;
+.button {
+	background-color: #59b1eb;
+	border: 2px solid #59b1eb;
+	color: white;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  margin: 10px auto;
+}
+
+.button:hover {
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
+
+/*トップページ デザイン設定*/
+
+.marquee{
+background-color: yellowgreen;
+
+}
+
+.main1 {
+  height: 200px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.main2 {
+  height: 300px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.main3 {
+  font-weight: bold;
+  color:#ff4500;
+  height:70px;
+  width:500px;
+   margin: 0 auto;
+}
+
+h1 {
+  color: #FF6600;
+  font-weight: bold;
+}
+
+dt {
+  color: #FF66CC;
+  font-weight: bold;
+}
+
+dd, li {
+  color: #444444;
+}
+p1 {
+  color: #FF66CC;
+  font-weight: bold;
+}
+
+/*ゲーム画面 デザイン設定*/
+
+.h1{
+  color: #009999;
   text-align: center;
+  font-size: 40px;
+  text-shadow: 3px 3px 1px #999999;
+  margin: 10px;
+}
+
+.h2{
+  margin: 0;
+  color:#008080;
+  text-align: center;
+  font-size:  30px;
+  text-shadow: 3px 3px 1px #999999;
+
 }
 
 canvas {
+    margin: 100;
     display: block;
     margin: auto;
-    border: 3px solid #B0C4DE;
-    background-color: #FFFFF0;
+    border: 3px solid #BBBBBB;
+    background-color: #FFFFEE;
 }
 
 .wraper {
   background-color: #F0F8FF;
   height: 100%;
+  background-image: url("lgi01a201408041500.jpg");
+  padding: 10px;
 }
